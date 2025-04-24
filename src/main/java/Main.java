@@ -1,6 +1,7 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
-import java.util.Objects;
+import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,12 +9,20 @@ public class Main {
         ArrayList<Integer> integers = new ArrayList<>(List.of(9,2,4,8));
         ArrayList<Object> objects = new ArrayList<>(List.of("Блэкджек", "и", 991823));
 
-        ArrayList<String> filteredStrings = FilterClass.filter(strings, new FilterClass<>());
-        ArrayList<Integer> filteredIntegers = FilterClass.filter(integers, new FilterClass<>());
-        ArrayList<Object> filteredOjects = FilterClass.filter(objects, new FilterClass<>());
+        ArrayList<String> filteredStrings = FilterClass.process(strings, new FilterClass<>());
+        ArrayList<Integer> filteredIntegers = FilterClass.process(integers, new FilterClass<>());
+        ArrayList<Object> filteredObjects = FilterClass.process(objects, new FilterClass<>());
 
         System.out.println(filteredStrings);
         System.out.println(filteredIntegers);
-        System.out.println(filteredOjects);
+        System.out.println(filteredObjects);
+
+        ArrayList<String> words = new ArrayList<>(List.of("Базар", "Вокзал", "Базар-вокзал", "Базар"));
+        Map<String, Long> mappedWords = ArrayMapper.arrayToMap(words);
+        System.out.println(mappedWords);
+
+        ArrayList<Integer> numbers = new ArrayList<>(List.of(12, 59, 4, -8, -8));
+        Map<Integer, Long> mappedNumbers = ArrayMapper.arrayToMap(numbers);
+        System.out.println(mappedNumbers);
     }
 }

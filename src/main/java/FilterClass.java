@@ -1,17 +1,21 @@
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
-public class FilterClass<T> implements Filter<T>{
-    @Override
-    public T apply(T o) {
-        System.out.println("Обрабатываю объект: " + o.toString());
-        return o;
-    }
+public class FilterClass<T>{
 
-    public static <T> ArrayList<T> filter(ArrayList<T> list, FilterClass<T> filterClass) {
-        ArrayList<T> resultList = new ArrayList<>();
-        for (T o : list) {
-            resultList.add(filterClass.apply(o));
-        }
-        return resultList;
+    Filter<T> filter = t -> {
+        System.out.println("Обрабатываю объект: " + t.toString());
+        return t;
+    };
+//    @Override
+//    public T apply(T o) {
+//        System.out.println("Обрабатываю объект: " + o.toString());
+//        return o;
+//    }
+
+    public static <T> ArrayList<T> process(ArrayList<T> list, FilterClass<T> filterClass) {
+        return list.stream()
+                .map(filterClass.filter::apply)
+                .collect(Collectors.toCollection(ArrayList::new));
     }
 }
