@@ -1,25 +1,19 @@
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 public class Main {
-    public static void main(String[] args) throws JsonProcessingException {
-        LocalDT localDT = new LocalDT();
-        localDT.setTimestamp();
-        ObjectMapper objectMapper = new ObjectMapper();
-        objectMapper.registerModule(new JavaTimeModule());
-        String json = objectMapper.writeValueAsString(localDT);
+    public static void main(String[] args) {
+        ArrayList<String> strings = new ArrayList<>(List.of("Shut up", "and", "take", "my money"));
+        ArrayList<Integer> integers = new ArrayList<>(List.of(9,2,4,8));
+        ArrayList<Object> objects = new ArrayList<>(List.of("Блэкджек", "и", 991823));
 
-        System.out.println(json);
+        ArrayList<String> filteredStrings = FilterClass.filter(strings, new FilterClass<>());
+        ArrayList<Integer> filteredIntegers = FilterClass.filter(integers, new FilterClass<>());
+        ArrayList<Object> filteredOjects = FilterClass.filter(objects, new FilterClass<>());
 
-        MyStringBuilder myStringBuilder = new MyStringBuilder();
-        myStringBuilder.append("Разорвись");
-        myStringBuilder.append("на британский");
-        myStringBuilder.delete(1, 3);
-        myStringBuilder.insert(5, "флаг");
-        System.out.println(myStringBuilder);
-        myStringBuilder.undo();
-        System.out.println(myStringBuilder);
+        System.out.println(filteredStrings);
+        System.out.println(filteredIntegers);
+        System.out.println(filteredOjects);
     }
 }
