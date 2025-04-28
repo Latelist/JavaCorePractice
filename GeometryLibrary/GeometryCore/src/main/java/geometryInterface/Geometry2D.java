@@ -1,6 +1,6 @@
 package geometryInterface;
 
-public interface Geometry {
+public interface Geometry2D {
     double calculateArea();
     double calculatePerimeter();
 

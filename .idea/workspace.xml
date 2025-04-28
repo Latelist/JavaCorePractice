@@ -1,8 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;
-  }
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c55b04e8-b076-467b-9f7c-c3842a83a2ca" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/GeometryLibrary/GeometryCore/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GeometryLibrary/ThreeDimensionalShape/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GeometryLibrary/ThreeDimensionalShape/src/main/java/abstractions/Shape3D.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GeometryLibrary/ThreeDimensionalShape/src/main/java/geometryInterface3D/Geometry3D.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GeometryLibrary/ThreeDimensionalShape/src/main/java/implementations/Cube.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GeometryLibrary/ThreeDimensionalShape/src/main/java/implementations/Sphere.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GeometryLibrary/ThreeDimensionalShape/src/main/java/implementations/SquarePyramid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeometryLibrary/GeometryUtils/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GeometryLibrary/GeometryUtils/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeometryLibrary/GeometryUtils/src/main/java/Operations.java" beforeDir="false" afterPath="$PROJECT_DIR$/GeometryLibrary/GeometryUtils/src/main/java/Operations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeometryLibrary/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GeometryLibrary/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeometryLibrary/src/main/java/geometryInterface/Geometry.java" beforeDir="false" afterPath="$PROJECT_DIR$/GeometryLibrary/GeometryCore/src/main/java/geometryInterface/Geometry2D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeometryLibrary/src/main/java/shapes/abstractions/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/GeometryLibrary/GeometryCore/src/main/java/shapes/abstractions/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeometryLibrary/src/main/java/shapes/implementations/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/GeometryLibrary/GeometryCore/src/main/java/shapes/implementations/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeometryLibrary/src/main/java/shapes/implementations/Hexagon.java" beforeDir="false" afterPath="$PROJECT_DIR$/GeometryLibrary/GeometryCore/src/main/java/shapes/implementations/Hexagon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeometryLibrary/src/main/java/shapes/implementations/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/GeometryLibrary/GeometryCore/src/main/java/shapes/implementations/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeometryLibrary/src/main/java/shapes/implementations/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/GeometryLibrary/GeometryCore/src/main/java/shapes/implementations/Square.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeometryLibrary/src/main/java/shapes/implementations/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/GeometryLibrary/GeometryCore/src/main/java/shapes/implementations/Triangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="workOffline" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
 }</component>
+  <component name="ProjectId" id="2wLjFFzHIDFIDelk42ZGsooMLXL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "maven__practice",
+    "jdk.selected.JAVA_MODULE": "corretto-17",
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "configurable.group.editor"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/GeometryLibrary" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c55b04e8-b076-467b-9f7c-c3842a83a2ca" name="Changes" comment="" />
+      <created>1745827644957</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1745827644957</updated>
+    </task>
+    <servers />
+  </component>
 </project>
