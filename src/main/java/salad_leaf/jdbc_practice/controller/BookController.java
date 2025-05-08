@@ -6,14 +6,13 @@ import salad_leaf.jdbc_practice.entities.Book;
 import salad_leaf.jdbc_practice.service.BookService;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
 @RestController
 @RequestMapping("/books")
 public class BookController {
 
-    private BookService bookService;
+    private final BookService bookService;
 
     public BookController(BookService bookService) {
         this.bookService = bookService;
@@ -31,7 +30,7 @@ public class BookController {
 
     @PostMapping
     public Book createBook(@RequestBody Book book) {
-        return bookService.save(book);
+        return bookService.createBook(book);
     }
 
     @DeleteMapping("/{id}")
@@ -40,11 +39,7 @@ public class BookController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Book> updateBook(@PathVariable UUID id, @RequestBody Book book) {
-        Book existingBook = bookService.findById(id);
-        existingBook.setPublicationYear(book.getPublicationYear());
-        existingBook.setAuthor(book.getAuthor());
-        existingBook.setTitle(book.getTitle());
-        return ResponseEntity.ok(bookService.save(existingBook));
+    public Book updateBook(@PathVariable UUID id, @RequestBody Book book) {
+        return bookService.updateBook(id, book);
     }
 }
