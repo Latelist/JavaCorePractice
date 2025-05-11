@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.converter.json.MappingJacksonValue;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import salad_leaf.spring_mvc_library.model.Book;
 import salad_leaf.spring_mvc_library.model.Views;
@@ -22,12 +23,19 @@ public class BookController {
         this.bookService = bookService;
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/author/{id}")
     public MappingJacksonValue createBook(@PathVariable UUID id, @RequestBody Book book) {
         Book saved = bookService.createBook(id, book);
         MappingJacksonValue value = new MappingJacksonValue(saved);
         value.setSerializationView(Views.BookDetails.class);
         return value;
+    }
+
+    @DeleteMapping("/delete/{id}")
+    @PreAuthorize("hasRole('ADMIN')")
+    public void deleteBook(@PathVariable Long id) {
+        bookService.deleteBook(id);
     }
 
     @GetMapping("/{id}")
@@ -41,7 +49,7 @@ public class BookController {
     @GetMapping
     public MappingJacksonValue getAllBooks(Pageable pageable) {
         Page<Book> page = bookService.allBooks(pageable);
-        MappingJacksonValue value = new MappingJacksonValue(page);
+        MappingJacksonValue value = new MappingJacksonValue(page.getContent());
         value.setSerializationView(Views.BookSummary.class);
         return value;
     }
@@ -55,15 +63,12 @@ public class BookController {
     }
 
     @PutMapping("/{id}")
+    @PreAuthorize("hasRole('ADMIN')")
     public MappingJacksonValue updateBook(@PathVariable Long id, @RequestBody Book book) {
         Book updated = bookService.updateBook(id, book);
         MappingJacksonValue value = new MappingJacksonValue(updated);
         value.setSerializationView(Views.BookDetails.class);
         return value;
     }
-
-    @DeleteMapping("/{id}")
-    public void deleteBook(@PathVariable Long id) {
-        bookService.deleteBook(id);
-    }
 }
+
